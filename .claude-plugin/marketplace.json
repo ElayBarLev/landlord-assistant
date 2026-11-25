@@ -1,0 +1,12 @@
+{
+  "name": "landlord-assistant",
+  "description": "A simple landlord assistant with folder memory",
+  "owner": { "name": "Elay Barlev" },
+  "plugins": [
+    {
+      "name": "landlord",
+      "source": "./plugins/landlord",
+      "description": "Remembers buildings, tenants, rent and repairs in a folder, so nothing has to be explained twice"
+    }
+  ]
+}
