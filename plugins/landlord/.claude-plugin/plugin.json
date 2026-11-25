@@ -1,6 +1,8 @@
 {
   "name": "landlord",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remembers buildings, tenants, rent and repairs in a folder, so nothing has to be explained twice",
-  "author": { "name": "Elay Barlev" }
+  "author": {
+    "name": "Elay Barlev"
+  }
 }
