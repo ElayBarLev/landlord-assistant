@@ -1,0 +1,19 @@
+[project]
+name = "landlord-library"
+version = "1.0.0"
+description = "Builds a searchable library of old documents without changing them"
+requires-python = ">=3.11"
+dependencies = ["pypdfium2>=4.30,<6", "pillow>=11,<13", "pillow-heif>=0.20,<2"]
+
+[project.scripts]
+landlord-library = "landlord_library.main:main"
+
+[project.gui-scripts]
+landlord-library-quiet = "landlord_library.main:quiet"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/landlord_library"]

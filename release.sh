@@ -10,7 +10,8 @@ git merge-base --is-ancestor origin/main HEAD || { echo "Run git pull first"; ex
 claude plugin validate .
 claude plugin validate plugins/landlord
 python3 tests/test_ledger.py
-python3 tests/test_catalog.py
+[ -x .venv/bin/python ] || { python3 -m venv .venv && .venv/bin/pip install -q -e librarian; }
+.venv/bin/python tests/test_library.py
 m=plugins/landlord/.claude-plugin/plugin.json
 v=$(python3 - "$m" <<'P'
 import json, subprocess, sys

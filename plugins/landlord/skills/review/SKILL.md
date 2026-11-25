@@ -11,7 +11,8 @@ Get the facts with the `portfolio-checker` agent, then give one screen, most urg
 2. Rent not recorded for this month (`money` skill).
 3. Leases ending in 90 days, and notice deadlines before that.
 4. Open repairs, oldest first.
-5. Files waiting in `inbox/`, and missing facts worth filling in.
+5. Library: new documents waiting to be described, problems in `library/STATUS.md`.
+6. Files waiting in `inbox/`, and missing facts worth filling in.
 
 Ask which item to handle first. Then set `Last review` in `HOME.md` to today.
 
@@ -22,7 +23,7 @@ Do this with the monthly review, quietly:
 - Units tables match unit files. Show conflicts, do not choose.
 - Files over their limits: move old detail to the log or `archive/`.
 - Completed TODO lines older than 60 days: move to `archive/todo-<year>.md`.
-- Back up: copy `HOME.md`, `TODO.md`, `catalog.csv` if present, `properties/` and `money/` to `archive/backup-YYYY-MM/`. If that folder exists, leave it alone.
+- Back up: copy `HOME.md`, `TODO.md`, `library-paper.md` if present, `properties/` and `money/` to `archive/backup-YYYY-MM/`. Not `library/`: it can be rebuilt, except the descriptions, so also copy `library/cards/` if the user keeps no other backup. If that folder exists, leave it alone.
 
 # Checkup
 

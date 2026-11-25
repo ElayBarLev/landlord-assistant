@@ -1,0 +1,29 @@
+name: test
+on: [push, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  library:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install ./librarian
+      - run: python tests/test_library.py
+        env: { PYTHONUTF8: "1" }
+      - run: python tests/test_ledger.py
+      - name: Schedule works
+        if: runner.os != 'Linux'
+        shell: bash
+        run: |
+          mkdir -p "$HOME/Documents/My Properties" "$HOME/Documents/Houses"
+          echo "lease" > "$HOME/Documents/Houses/lease.txt"
+          landlord-library setup --root "$HOME/Documents"
+          if [ "$RUNNER_OS" = Windows ]; then MSYS_NO_PATHCONV=1 schtasks /Query /TN LandlordLibrary; else launchctl list | grep landlord.library; fi
+          landlord-library-quiet
+          cat "$HOME/Documents/My Properties/library/STATUS.md"
