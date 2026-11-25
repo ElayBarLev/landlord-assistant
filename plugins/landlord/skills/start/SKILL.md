@@ -16,13 +16,15 @@ The memory is the connected folder that contains `HOME.md`.
 3. If the request is about one building or unit, read only that building's `building.md` and that unit's file.
 4. Stop. Do not read other buildings, logs, or documents unless the question needs them. This is what keeps them under their usage limits.
 
+Questions about the past, or old files: use the `archive` skill, and never read `catalog.csv` whole.
+
 Questions across every building: use the `portfolio-checker` agent. A long document (lease, contract, inspection report): use the `document-reader` agent. Both read in their own context and return a short answer. If agents are unavailable, do it yourself, one file at a time.
 
 If it is unclear which unit they mean, ask one short question. Never guess between tenants.
 
 ## 2. If no folder is connected, or HOME.md is missing
 
-- No folder connected: ask them to open the **My Properties** project and connect the **My Properties** folder. Do not start a second memory elsewhere.
+- No folder connected: ask them to open the **My Properties** project in the Claude Desktop app. If it is still missing, use **Add folder** under the message box and choose **My Properties**. Do not start a second memory elsewhere, and do not ask them to upload the files.
 - Folder connected but `HOME.md` missing while other memory files exist (`properties/`, `money/`, `TODO.md`): do not run setup. Say that the index is missing, offer to rebuild it from those files, and overwrite nothing.
 - Folder connected and no memory in it: run first-time setup below.
 
@@ -38,7 +40,8 @@ If it is unclear which unit they mean, ask one short question. Never guess betwe
    money/<year>.csv                         rent and expenses
    inbox/                                   new documents go here
    documents/<building>/                    filed documents
-   archive/                                 old material, never deleted
+   old-files/                               old documents and scans, originals never changed
+   archive/                                 retired memory and backups, never deleted
    ```
    Use short lowercase folder names in Latin letters (`main-st-12`). Keep the real name inside the file. A single apartment is a building with one unit.
 2. Ask one question at a time: country and city (state or province too), currency, preferred language, family helper's name, how many buildings. Save each answer immediately.
@@ -61,4 +64,4 @@ Adding a building or unit later works the same way. Add it to `HOME.md` too.
 
 ## Help
 
-If they ask what you can do, give six examples in their language: "Who hasn't paid?", "Write to the tenant in 2A about the noise", "The boiler broke at Main St", "I put a lease in the inbox", "What ends in the next 3 months?", "Do my monthly review".
+If they ask what you can do, give six examples in their language: "Who hasn't paid?", "Write to the tenant in 2A about the noise", "The boiler broke at Main St", "I put a lease in the inbox", "When did we replace the roof?", "Do my monthly review".

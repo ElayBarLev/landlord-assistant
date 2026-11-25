@@ -22,7 +22,7 @@ Do this with the monthly review, quietly:
 - Units tables match unit files. Show conflicts, do not choose.
 - Files over their limits: move old detail to the log or `archive/`.
 - Completed TODO lines older than 60 days: move to `archive/todo-<year>.md`.
-- Back up: copy `HOME.md`, `TODO.md`, `properties/` and `money/` to `archive/backup-YYYY-MM/`. If that folder exists, leave it alone.
+- Back up: copy `HOME.md`, `TODO.md`, `catalog.csv` if present, `properties/` and `money/` to `archive/backup-YYYY-MM/`. If that folder exists, leave it alone.
 
 # Checkup
 

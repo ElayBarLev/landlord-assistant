@@ -17,4 +17,4 @@ description: Track repairs and file documents. Use when something is broken, for
 1. Use the `document-reader` agent so a long document stays out of this conversation.
 2. Show the key facts with page numbers and ask for confirmation before changing tenant, rent, lease or deposit facts in memory.
 3. Save the confirmed facts with `remember`. Put lease ends, notice deadlines, insurance ends and inspections in `TODO.md`.
-4. Move the original, unedited, from `inbox/` to `documents/<building>/` as `YYYY-MM-DD-type-unit.ext`. If that name exists, add `-2`. Link it in the unit file.
+4. Move the original, unedited, from `inbox/` to `documents/<building>/` as `YYYY-MM-DD-type-unit.ext`. If that name exists, add `-2`. Link it in the unit file. Many old files at once: use the `archive` skill instead.
